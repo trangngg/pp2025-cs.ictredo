@@ -1,15 +1,8 @@
-# domains/student.py
-class Student:
-    def __init__(self, student_id, name, dob):
-        self.student_id = student_id
+class student:
+    def __init__(self, id, name, dob):
+        self.id = id
         self.name = name
         self.dob = dob
-        self.marks = {}
 
-    def set_mark(self, course, mark):
-        self.marks[course] = mark
-
-    def get_gpa(self):
-        if not self.marks:
-            return 0
-        return sum(self.marks.values()) / len(self.marks)
+    def __str__(self):
+        return f"ID: {self.id}, Name: {self.name}, DOB: {self.dob}"

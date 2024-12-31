@@ -1,18 +1,14 @@
-# output.py
-import curses
-
-def display_students(stdscr, students):
-    stdscr.clear()
-    stdscr.addstr("Student List:\n")
+def display_students(students):
+    print("Students:")
     for student in students:
-        stdscr.addstr(f"{student.student_id} - {student.name} - {student.dob}\n")
-    stdscr.refresh()
-    stdscr.getch()
+        print(student)
 
-def display_courses(stdscr, courses):
-    stdscr.clear()
-    stdscr.addstr("Course List:\n")
+def display_courses(courses):
+    print("Courses:")
     for course in courses:
-        stdscr.addstr(f"{course['id']} - {course['name']}\n")
-    stdscr.refresh()
-    stdscr.getch()
+        print(course)
+
+def display_marks(marks):
+    print("Marks:")
+    for mark in marks:
+        print(mark)
